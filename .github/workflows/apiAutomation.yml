@@ -16,18 +16,22 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
+          cache: 'npm'
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Run Tests
-        run: npm test
+      - name: Run API & GUI Tests
+        run: npx cucumber-js
 
       - name: Upload Report
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: test-report
-          path: reports/
+          path: |
+            reports/
+            cucumber-report.html
