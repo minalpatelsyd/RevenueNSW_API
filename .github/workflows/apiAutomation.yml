@@ -25,13 +25,11 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run API & GUI Tests
-        run: npx cucumber-js
+        run: npx cucumber-js --format html:reports/cucumber-report.html
 
       - name: Upload Report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: test-report
-          path: |
-            reports/
-            cucumber-report.html
+          path: reports/
