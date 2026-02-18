@@ -1,0 +1,27 @@
+{
+  "name": "revenuensw_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js",
+     "test:echo": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minalpatelsyd/RevenueNSW_API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/minalpatelsyd/RevenueNSW_API/issues"
+  },
+  "homepage": "https://github.com/minalpatelsyd/RevenueNSW_API#readme",
+  "dependencies": {
+    "@cucumber/cucumber": "^12.6.0",
+    "@playwright/test": "^1.58.2",
+    "axios": "^1.13.5"
+  }
+}
